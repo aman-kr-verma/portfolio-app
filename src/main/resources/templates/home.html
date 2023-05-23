@@ -2,12 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Hi there!!<br>I am Aman Kumar Verma, built this webpage using spring boot and thymeleaf template to showcase my work experience and portfolio.(Date: 23-may-2023">
     <title>Resume Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="..\static\css\style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
 </head>
 <body>
+    <div class="page">
 <div class="profile">
-    <img src="..\static\images\profile_pic.jpg" height="102px" width="100px" class="centered-image">
+    <img th:src="@{/images/profile_pic.jpg}" height="102px" width="100px" class="centered-image">
     <div class="name">
         Aman Kumar Verma
     </div>
@@ -15,12 +17,58 @@
         <p>Backend Developer<br>Java Spring Boot</p>
     </div>
     <div class="middle">
-       <a href="mailto:amakv055@gmail.com" target="_blank"><img src="..\static\images\icons\mail.png" class="icon"></a>
-       <a href="https://github.com/aman-kr-verma?tab=overview&from=2023-05-01&to=2023-05-18" target="_blank"><img src="..\static\images\icons\github.png" class="icon"></a>
-       <a href="https://www.linkedin.com/in/aman-kumar-verma-2144581b7/" target="_blank"><img src="..\static\images\icons\linkedin.png" class="icon"></a>
+       <a href="mailto:amakv055@gmail.com" target="_blank"><img th:src="@{/images/icons/mail.png}" class="icon"></a>
+       <a href="https://github.com/aman-kr-verma?tab=overview&from=2023-05-01&to=2023-05-18" target="_blank"><img th:src="@{/images/icons/github.png}" class="icon"></a>
+       <a href="https://www.linkedin.com/in/aman-kumar-verma-2144581b7/" target="_blank"><img th:src="@{/images/icons/linkedin.png}" class="icon"></a>
     </div>
     <div class="profile_info_bottom">
-fgd
+      <p class="title-ed-details">
+        EDUCATIONAL BACKGROUND
+      </p>
+      <div class="horizontal-line"></div>
+      <div class="ed-details">
+        <table style="width: 100%;">
+          <tr>
+            <td class="left">10th CBSE</td>
+            <td class="right" colspan="2">10.00 CGPA</td>
+          </tr>
+          <tr>
+            <td class="progress" colspan="2"><div class="progress-bar">
+              <div class="progress-bar-inner" style="width: 96%;"></div>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="left">12th JAC</td>
+            <td class="right">74.8</td>
+          </tr>
+          <tr>
+            <td class="progress" colspan="2"><div class="progress-bar">
+              <div class="progress-bar-inner" style="width: 74.8%;"></div>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="left">B Tech IT, TINT</td>
+            <td class="right">8.40 CGPA</td>
+          </tr>
+          <tr>
+            <td class="progress" colspan="2"><div class="progress-bar">
+              <div class="progress-bar-inner" style="width: 84%;"></div>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <p class="title-ed-details">
+        LANGUAGES
+      </p>
+      <div class="horizontal-line"></div>
+      <div class="ed-details">
+      <button class="button">English</button>
+      <button class="button">Hindi</button>
+      </div>
+    </div>
+    <div class="lower">
+<!--      <img th:src="@{/images/icons/call.png}" class="icon"><span class="profile_info">7488368234</span>-->
+      
     </div>
 </div>
 <div class="container">
@@ -65,6 +113,11 @@ fgd
               <td>Core-Java, Spring Boot, JPA/Hibernate, Junit & Mockito, Restful webservices</td>
             </tr>
             <tr>
+                <td>Frontend </td>
+                <td>:</td>
+                <td>Html, css</td>
+            </tr>
+            <tr>
               <td>DevOps Tools </td>
               <td>:</td>
               <td>Docker, AWS</td>
@@ -85,7 +138,85 @@ fgd
         </p> -->
         
     </div>
+    <br>
+    <div class="experience">
+        <h4 class="title">EXPERIENCES</h4> 
+    </div>
+    <br>
+    <div class="exps">
+      <div class="exp-content">
+        <table>
+            <tr>
+              <td class="head">Employer</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Accenture Solutions Pvt Ltd, Bangalore</td>
+            </tr>
+            <tr>
+              <td class="head">Designation</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Software Engineering Associate</td>
+            </tr>
+            <tr>
+              <td class="head">Date of Employment</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>From 24 Dec 2021 till date</td>
+            </tr>
+            <tr>
+              <td class="head">Domain</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Agile Web Development</td>
+            </tr>
+          </table>
+          <p><span class="head"> Project Responsibilities</span>
+            <br>
+                    Developed RESTful web services using Java Spring Boot, and manage the codebase using SCM/ALM tools such 
+as Git, Atlassian Jira, SonarQube etc.<br>
+                Written high-quality, scalable, and maintainable code, following coding best practices, adhering to coding 
+                    standards, and using agile methodologies, created and maintained technical documentation related to the 
+                    application, especially API documentation using Swagger.<br>
+                    Collaborate with the development team to manage the development lifecycle using ALM tools such as Jenkins 
+                        for continuous integration and delivery (CI/CD).
+            
+        </p>
+    </div>
+    <!-- </div> -->
+    <!-- <div class="exps sec"> -->
+      <div class="exp-content2">
+        <table>
+            <tr>
+              <td class="head">Employer</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Accenture Solutions Pvt Ltd, Bangalore</td>
+            </tr>
+            <tr>
+              <td class="head">Designation</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Software Engineering Associate</td>
+            </tr>
+            <tr>
+              <td class="head">Date of Employment</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>From 24 Dec 2021 till date</td>
+            </tr>
+            <tr>
+              <td class="head">Domain</td>
+              <td style="width: 10px; text-align: center;">:</td>
+              <td>Agile Web Development</td>
+            </tr>
+          </table>
+          <p><span class="head">Project Responsibilities</span>
+            <br>
+            Developed interactive visual reports using PowerBI, Written DAX for scoring logic based on client's specific 
+            requirements.<br>
+            Created views in PostgreSQL and datasets based on the views for specific requirements, power automate flows 
+            using Power Automate feature of Microsoft.<br>  <br><br><br>
+        </p>
+    </div>
+    <!-- </div> -->
+    </div>
+    <div><br></div>
 </div>
+    </div>
 </body>
 </html>
 
