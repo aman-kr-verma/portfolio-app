@@ -1,5 +1,5 @@
 FROM openjdk:11-jre-slim
-WORKDIR /app
-COPY target/my-application.jar .
+WORKDIR /home/ubuntu/projects/portfolio-app
+COPY target/portfolio.jar .
 EXPOSE 8080
-CMD ["java", "-jar", "my-application.jar"]
+CMD ["java", "-jar", "portfolio.jar"]
